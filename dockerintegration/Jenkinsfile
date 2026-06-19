@@ -16,11 +16,12 @@ pipeline {
 
         stage('Docker Check') {
             steps {
-                bat 'where docker'
-                bat 'docker --version'
+                withEnv(["PATH+DOCKER=C:\\Program Files\\Docker\\Docker\\resources\\bin"]) {
+                    bat 'docker --version'
+                    bat 'where docker'
+                }
             }
         }
-
         stage('Build Docker Image') {
             steps {
                 dir('dockerintegration') {

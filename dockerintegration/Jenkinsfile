@@ -36,8 +36,7 @@ pipeline {
         stage('Run Container') {
             steps{
                 dir('dockerintegration') {
-                    bat 'docker stop saikumar1605/docker-jenkins || exit 0'
-                    bat 'docker rm saikumar1605/docker-jenkins || exit 0'
+                    bat 'docker rm -f MessageContainer || exit 0'
                     bat 'docker pull saikumar1605/docker-jenkins'
                     bat 'docker run -d -p 9090:9090 --name MessageContainer saikumar1605/docker-jenkins'
                 }

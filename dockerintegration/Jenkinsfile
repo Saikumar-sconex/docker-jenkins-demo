@@ -25,8 +25,8 @@ pipeline {
         stage('Push Image to Docker Hub') {
             steps {
                 dir('dockerintegration') {
-                    withCredentials([string(credentialsId: 'docker-hub-creds', variable: 'docker-hub-creds')]) {
-                        bat 'docker login -u saikumar1605 -p %docker-hub-creds%'
+                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
+                        bat 'docker login -u saikumar1605 -p %dockerhubpwd%'
                         bat 'docker push saikumar1605/docker-jenkins'
                     }
                 }

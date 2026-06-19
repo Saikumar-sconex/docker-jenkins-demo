@@ -14,14 +14,6 @@ pipeline {
             }
         }
 
-        stage('Docker Check') {
-            steps {
-                withEnv(["PATH+DOCKER=C:\\Program Files\\Docker\\Docker\\resources\\bin"]) {
-                    bat 'docker --version'
-                    bat 'where docker'
-                }
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 dir('dockerintegration') {

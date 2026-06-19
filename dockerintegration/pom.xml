@@ -10,7 +10,6 @@
 	</parent>
 	<groupId>com.docker.jenkins</groupId>
 	<artifactId>dockerintegration</artifactId>
-	<version>1.0.0</version>
 	<name/>
 	<description/>
 	<url/>

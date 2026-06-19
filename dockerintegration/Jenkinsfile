@@ -37,7 +37,6 @@ pipeline {
             steps{
                 dir('dockerintegration') {
                     bat 'docker run -d -p 9090:9090 --name MessageContainer saikumar1605/docker-jenkins'
-                    bat 'ping -n 11 127.0.0.1 >nul'
                 }
             }
         }

@@ -11,6 +11,6 @@ public class TestController {
 
     @GetMapping
     public ResponseEntity<String> getMessage() {
-        return ResponseEntity.ok("Hello Satish How are you..");
+        return ResponseEntity.ok("Hello Bhanu How are you..");
     }
 }
